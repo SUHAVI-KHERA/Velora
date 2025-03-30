@@ -1,0 +1,224 @@
+.dropdown-content {
+    display:none;
+    }
+    .dropdown:hover .dropdown-content {
+    display: block;
+    }
+    .font-Merienda{
+    font-family: "Merienda", cursive;
+    }
+    .font-Arsenal{
+    font-family: "Arsenal", sans-serif;
+    }
+    .font-Lora{
+    font-family: "Lora", serif;
+    }
+    .container {
+    display: flex;
+    margin: 0 auto;
+    padding: 20px;
+    }
+    h2{
+    font-family: "Arsenal SC", sans-serif;
+    } 
+    .account-sidebar {
+    width: 250px;
+    padding: 20px;
+    }
+    .account-sidebar h2 {
+    margin-top: 0;
+    }
+    .account-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    }
+    .account-sidebar ul li {
+    margin: 10px 0;
+    }
+    .account-sidebar ul li a {
+    text-decoration: none;
+    }
+    /* add to bag */
+    .header{
+    height: 80px;
+    width: 70%;
+    background-color: #0f172a;
+    color:white;
+    border-radius: 3px;
+    margin: 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    }
+    .cart{
+    display: flex;
+    background-color:#0f172a;
+    border: solid;
+    border:white;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    padding: 7px 10px;
+    border-radius: 3px;
+    width: 80px;
+    }
+    /* 
+    .head{
+    background-color: #0f172a;
+    border-radius: 3px;
+    border:solid;
+    border:white;
+    height: 40px;
+    padding:10px;
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    } */
+    .fa-solid{
+    color: white;
+    /* border:white; */
+    /* border:solid; */
+    /* border-radius: 1px; */
+    }
+    .cart p{
+    height: 22px;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    background-color: #0f172a;
+    color: white;
+    border:white;
+    border:solid;
+    /* font:white; */
+    }
+    .container{
+    display: flex;
+    width: 70%;
+    margin-bottom: 30px;
+    color:white;
+    }
+    #root{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    grid-gap:20px;
+    color:white;
+    }
+    .sidebar{
+    width: 40%;
+    color:white;
+    border-radius: 5px;
+    background-color:#0f172a;
+    margin-left: 20px;
+    padding: 15px;
+    text-align: center;
+    border:solid;
+    border:white;
+    }
+    .head{
+    background-color:#0f172a ;
+    border-radius: 3px;
+    height: 40px;
+    padding:10px;
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    border:white;
+    border:solid;
+    }
+    .foot{
+    display: flex;
+    justify-content:space-between;
+    margin:20px 0px;
+    padding: 10px 0px;
+    border-top: 1px solid #ffffff ;
+    }
+    .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding:15px;
+    }
+    .img-box{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    }
+    .images{
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+    object-position: center;
+    }
+    .bottom{
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+    }
+    h2{
+    font-size: 20px;
+    color: #f472b6 ;
+    }
+    button{
+    width: 100%;
+    position: relative;
+    border:solid;
+    border-color: white;
+    border-radius: 5px;
+    background-color: #0f172a;
+    padding:7px 25px;
+    cursor: pointer;
+    color: white;
+    }
+    button:hover{
+    background-color: #f97316;
+    }
+    .cart-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color:#0f172a;
+    border-bottom: 1px solid white;
+    border-radius: 3px;
+    margin:10px 10px;
+    /* border:solid;
+    border:white; */
+    }
+    .row-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border:white;
+    border:solid; */
+    }
+    .rowimg{
+    max-width: 43px;
+    max-height: 43px;
+    border-radius: 50%;
+    /* border:white;
+    border:solid; */
+    }
+    .fa-trash:hover{
+    cursor: pointer;
+    color: #f97316;
+    }
