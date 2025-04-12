@@ -3,126 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VELORA - Jewelry</title>
+    <title>VELORA - Add Product</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap');
-
         body {
-            background-color: black;
-            color: #ff69b4;
             font-family: "Merienda", cursive;
-            text-align: center;
-            margin: 0;
-            padding: 0;
+            background-color: #1a1a1a;
+            color: #ff69b4;
         }
 
-        h1 {
-            color: #FC0FC0;
-            font-size: 40px;
-            margin-top: 20px;
+        h1, h2 {
+            font-weight: bold;
         }
 
         form {
-            max-width: 500px;
-            margin: 20px auto;
-            padding: 20px;
-            background: rgba(255, 105, 180, 0.1);
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        label {
-            font-size: 16px;
-            text-align: left;
+            background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         input, textarea, select, button {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ff69b4;
-            border-radius: 5px;
-            background: black;
-            color: #ff69b4;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #ff69b4;
+            box-shadow: 0 0 5px #ff69b4;
         }
 
         button {
-            background-color: #ff69b4;
-            color: black;
-            font-weight: bold;
-            cursor: pointer;
+            transition: transform 0.2s ease;
         }
 
         button:hover {
-            background-color: #ff1493;
+            transform: scale(1.05);
         }
     </style>
 </head>
-<!-- Header -->
-<body class="bg-black">
-    <div class="text-center my-5">
-       <h1 class="text-[#FC0FC0] font-bold text-5xl text-center"> 
-          <span class="font-Merienda">Velora<span>
-       </h1>
+<body class="bg-gray-900 text-white">
+    <div class="text-center my-10">
+        <h1 class="text-5xl font-bold text-pink-400">Velora</h1>
+        <h2 class="text-2xl mt-2 text-gray-300">Add Product</h2>
     </div>
-<body>
-    <!-- <h1>Velora</h1> -->
-    <h2>Add Product</h2>
-    <form id="productForm" class="bg-black w-full">
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Product Name" required>
 
-        <label for="brand">Brand</label>
-        <input type="text" id="brand" placeholder="Enter your Brand" required>
-
-        <label for="description">Description</label>
-        <textarea id="description" placeholder="Add product description" required></textarea>
-
-        <label for="price">Price</label>
-        <input type="text" id="price" placeholder="Eg: $1000" required>
-
-        <label for="category">Category</label>
-        <select id="category" required>
-            <option value="">Select category</option>
-            <option value="electronics">Rings</option>
-            <option value="clothing">Necklaces</option>
-            <option value="accessories">Bangles</option>
-            <option value="accessories">Earings</option>
-            <option value="accessories">Gifting Packs</option>
-            <option value="accessories">Bracelets</option>
-        </select>
-
-        <label for="stock">Stock Quantity</label>
-        <input type="number" id="stock" placeholder="Stock Remaining" required>
-
-        <label for="releaseDate">Release Date</label>
-        <input type="date" id="releaseDate" required>
-
-        <label for="image">Image</label>
-        <input type="file" id="image" accept="image/*" required>
-
-        <div>
-            <input type="checkbox" id="available">
-            <label for="available">Product Available</label>
+    <form id="productForm" class="max-w-4xl mx-auto p-8 rounded-lg grid grid-cols-2 gap-6">
+        <div class="flex items-center">
+            <label for="name" class="w-1/3 text-sm font-medium text-gray-300">Name</label>
+            <input type="text" id="name" placeholder="Product Name" value="Diamond Ring" required
+                class="w-2/3 p-3 bg-gray-800 text-white border border-gray-600 rounded-lg">
         </div>
-        
-        <button type="submit">Submit</button>
+
+        <div class="flex items-center">
+            <label for="brand" class="w-1/3 text-sm font-medium text-gray-300">Brand</label>
+            <input type="text" id="brand" placeholder="Enter your Brand" value="Velora" required
+                class="w-2/3 p-3 bg-gray-800 text-white border border-gray-600 rounded-lg">
+        </div>
+
+        <div class="flex items-center col-span-2">
+            <label for="description" class="w-1/6 text-sm font-medium text-gray-300">Description</label>
+            <textarea id="description" placeholder="Add product description" required
+                class="w-5/6 p-3 bg-gray-800 text-white border border-gray-600 rounded-lg">Elegant diamond ring for special occasions.</textarea>
+        </div>
+
+        <div class="flex items-center">
+            <label for="price" class="w-1/3 text-sm font-medium text-gray-300">Price</label>
+            <input type="text" id="price" placeholder="Eg: $1000" value="1500" required
+                class="w-2/3 p-3 bg-gray-800 text-white border border-gray-600 rounded-lg">
+        </div>
+
+        <div class="flex items-center">
+            <label for="category" class="w-1/3 text-sm font-medium text-gray-300">Category</label>
+            <select id="category" required
+                class="w-2/3 p-3 bg-gray-800 text-white border border-gray-600 rounded-lg">
+                <option value="">Select category</option>
+                <option value="electronics">Rings</option>
+                <option value="clothing">Necklaces</option>
+                <option value="accessories" selected>Bangles</option>
+                <option value="accessories">Earings</option>
+                <option value="accessories">Gifting Packs</option>
+                <option value="accessories">Bracelets</option>
+            </select>
+        </div>
+
+        <div class="flex items-center">
+            <label for="stock" class="w-1/3 text-sm font-medium text-gray-300">Stock Quantity</label>
+            <input type="number" id="stock" placeholder="Stock Remaining" value="25" required
+                class="w-2/3 p-3 bg-gray-800 text-white border border-gray-600 rounded-lg">
+        </div>
+
+        <div class="flex items-center">
+            <label for="releaseDate" class="w-1/3 text-sm font-medium text-gray-300">Release Date</label>
+            <input type="date" id="releaseDate" value="2025-04-01" required
+                class="w-2/3 p-3 bg-gray-800 text-white border border-gray-600 rounded-lg">
+        </div>
+
+        <div class="flex items-center">
+            <label for="image" class="w-1/3 text-sm font-medium text-gray-300">Image</label>
+            <input type="file" id="image" accept="image/*" required
+                class="w-2/3 p-3 bg-gray-800 text-white border border-gray-600 rounded-lg">
+        </div>
+
+        <div class="flex items-center">
+            <input type="checkbox" id="available" checked
+                class="w-5 h-5 text-pink-400 bg-gray-800 border-gray-600 rounded focus:ring-pink-500">
+            <label for="available" class="ml-2 text-sm font-medium text-gray-300">Product Available</label>
+        </div>
+
+        <div class="col-span-2">
+            <button type="submit"
+                class="w-full py-3 bg-pink-500 text-black font-bold rounded-lg hover:bg-pink-600">Submit</button>
+        </div>
     </form>
 
     <script>
-        document.getElementById('productForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Product Added Successfully!');
+        $(document).ready(function () {
+            $('#productForm').on('submit', function (event) {
+                event.preventDefault();
+
+                var formData = new FormData();
+                formData.append('product', new Blob([JSON.stringify({
+                    name: $('#name').val(),
+                    brand: $('#brand').val(),
+                    description: $('#description').val(),
+                    price: $('#price').val(),
+                    category: $('#category').val(),
+                    stock: $('#stock').val(),
+                    releaseDate: $('#releaseDate').val(),
+                    available: $('#available').is(':checked')
+                })], { type: 'application/json' }));
+                formData.append('imageFile', $('#image')[0].files[0]);
+
+                $.ajax({
+                    url: 'http://localhost:8086/api/product',
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        alert('Product added successfully!');
+                        console.log(response);
+                    },
+                    error: function (xhr, status, error) {
+                        alert('Failed to add product: ' + xhr.responseText);
+                        console.error(error);
+                    }
+                });
+            });
         });
     </script>
 </body>
