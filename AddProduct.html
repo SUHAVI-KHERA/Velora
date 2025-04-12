@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELORA - Jewelry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap');
+
+        body {
+            background-color: black;
+            color: #ff69b4;
+            font-family: "Merienda", cursive;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #FC0FC0;
+            font-size: 40px;
+            margin-top: 20px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 105, 180, 0.1);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label {
+            font-size: 16px;
+            text-align: left;
+        }
+
+        input, textarea, select, button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ff69b4;
+            border-radius: 5px;
+            background: black;
+            color: #ff69b4;
+        }
+
+        button {
+            background-color: #ff69b4;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<!-- Header -->
+<body class="bg-black">
+    <div class="text-center my-5">
+       <h1 class="text-[#FC0FC0] font-bold text-5xl text-center"> 
+          <span class="font-Merienda">Velora<span>
+       </h1>
+    </div>
+<body>
+    <!-- <h1>Velora</h1> -->
+    <h2>Add Product</h2>
+    <form id="productForm" class="bg-black w-full">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Product Name" required>
+
+        <label for="brand">Brand</label>
+        <input type="text" id="brand" placeholder="Enter your Brand" required>
+
+        <label for="description">Description</label>
+        <textarea id="description" placeholder="Add product description" required></textarea>
+
+        <label for="price">Price</label>
+        <input type="text" id="price" placeholder="Eg: $1000" required>
+
+        <label for="category">Category</label>
+        <select id="category" required>
+            <option value="">Select category</option>
+            <option value="electronics">Rings</option>
+            <option value="clothing">Necklaces</option>
+            <option value="accessories">Bangles</option>
+            <option value="accessories">Earings</option>
+            <option value="accessories">Gifting Packs</option>
+            <option value="accessories">Bracelets</option>
+        </select>
+
+        <label for="stock">Stock Quantity</label>
+        <input type="number" id="stock" placeholder="Stock Remaining" required>
+
+        <label for="releaseDate">Release Date</label>
+        <input type="date" id="releaseDate" required>
+
+        <label for="image">Image</label>
+        <input type="file" id="image" accept="image/*" required>
+
+        <div>
+            <input type="checkbox" id="available">
+            <label for="available">Product Available</label>
+        </div>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('productForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Product Added Successfully!');
+        });
+    </script>
+</body>
+</html>
