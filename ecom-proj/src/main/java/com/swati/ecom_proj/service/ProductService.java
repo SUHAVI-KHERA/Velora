@@ -26,6 +26,12 @@ public class ProductService {
     }
 
     public Product addproduct(Product product, MultipartFile imageFile) throws IOException {
+
+        String name = imageFile.getOriginalFilename();
+        byte[]  data = imageFile.getBytes();
+        String mimeType = imageFile.getContentType();
+
+
         product.setImageName(imageFile.getOriginalFilename());
         product.setImageType(imageFile.getContentType());
         product.setImageDate(imageFile.getBytes());

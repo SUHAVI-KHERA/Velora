@@ -38,11 +38,14 @@ public class Product {
 
 
     public void setImageType(String contentType) {
+        this.imageType = contentType;
     }
 
     public void setImageName(String originalFilename) {
+        this.imageName = originalFilename;
     }
 
     public void setImageDate(byte[] bytes) {
+        this.imageDate = bytes;
     }
 }
